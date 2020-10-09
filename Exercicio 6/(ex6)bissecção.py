@@ -13,12 +13,12 @@ def func(m):
 def funcv(m):
     return (g*m*(1 - mt.e**( (-c/m)*t ) ))/c
 
-for j in arange(0, 90, 10):
-    print("x = {:<4} : f(x)= {:<17f} : f(x)= {:<17f}".format(j, func(j), funcv(j)) )
+# for j in arange(0, 100, 10):
+#     print("x = {:<4} : f(x)= {:<17f} : fv(x)= {:<17f}".format(j, func(j), funcv(j)) )
 
 def bisseccao(a, b):
     i = 0
-    precisao = 1e-5
+    precisao = 1e-2
     while(abs(a-b) > precisao):
         xzero = (a+b)/2
         if(func(a) * func(xzero) > 0 ):
@@ -33,13 +33,7 @@ def bisseccao(a, b):
     print("número de iterações: {:^10}".format( i))
     xzero = (a+b)/2
     print("raiz aproximada: f({:^10.5f}) = {:>10.5f}".format(xzero, func(xzero)))
-    print("ponto na função: f({:^10.5f}) = {:>10.5f}".format(xzero, funcm(xzero)))
-    if( funcl(xzero) < 0 ):
-        print("é ponto de máximo\n")
-    else:
-        print("é ponto de minimo\n")
+
     return xzero
 
-# bisseccao(0, 2*mt.pi)
-# bisseccao(2*mt.pi, 0)
-# bisseccao((3/2)*mt.pi, mt.pi*(5/2))
+bisseccao(1, 100)
