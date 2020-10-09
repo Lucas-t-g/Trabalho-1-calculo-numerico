@@ -30,7 +30,7 @@ print("raiz aproximada: f({:<10}) = {:<10}".format(x2, func(x2)))
 
 # SEGUNDA RAIZ
 a = 10
-b = 7.144
+b = 5
 x1 = b
 precisao = 1e-3
 i = 1
@@ -49,3 +49,4 @@ print("precisão: ", precisao)
 print("[b, a] = [", b, ",", a, "]")
 print("número de iterações: ", i)
 print("raiz aproximada: f({:<10}) = {:<10}".format(x2, func(x2)))
+print("não encontra a segunda raiz pois o modulo da derivada da fi no intervalo é superior a 1")
