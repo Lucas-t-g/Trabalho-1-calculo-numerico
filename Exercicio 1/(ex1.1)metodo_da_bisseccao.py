@@ -16,7 +16,6 @@ while(abs(a-b) > precisao):
   i += 1
 
 print("precisão: ", precisao)
-print("[b, a] = [", b, ",", a, "]")
 print("número de iterações: ", i)
 xzero = (a+b)/2
 print("f(",xzero,") = ", func(xzero))

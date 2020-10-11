@@ -83,7 +83,7 @@ class Matriz:
             # print(x)
 
 
-        print("solução do sistema:")
+        print("\nsolução do sistema:")
         for i in range(len(x)):
             print("x{} = {:>8.4f}".format(i, x[i]))
             
@@ -96,7 +96,7 @@ class Matriz:
 #para testar com outro metodo  de entrada(diretamente pelo codigo)
 # [[6.0, 2.0, -1.0, 7.0], [2.0, 4.0, 1.0, 7.0], [3.0, 2.0, 8.0, 13.0]]
 # [[-4.0, -1.0, 2.0, 7.0], [1.0, 6.0, -1.0, -6.0], [4.0, -3.0, -13.0, 6.0]]
-matriz = [[6.0, 2.0, -1.0, 7.0], [2.0, 4.0, 1.0, 7.0], [3.0, 2.0, 8.0, 13.0]]
+matriz = [[-4.0, -1.0, 2.0, 7.0], [1.0, 6.0, -1.0, -6.0], [4.0, -3.0, -13.0, 6.0]]
 linhas = 3
 colunas = 4
 matriz = Matriz(matriz, linhas, colunas)
@@ -105,7 +105,7 @@ matriz.print_matriz()
 
 matriz.escalona()
 
-print("sua matrizes triangularizada: ")
+print("\nsua matriz triangularizada: ")
 matriz.print_matriz()
 
 matriz.solucao_sistema()

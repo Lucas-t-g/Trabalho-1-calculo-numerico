@@ -22,14 +22,14 @@ i = 1
 x2 = x1-func(x1)/funcl(x1)
 # print("k{} : fite(x1) = {:<10.5f} : {:<10.5f} - {:<10.5f} = {:<10.5f}".format(i, x1, x2, x1, x2-x1 ))
 # print("k{} : fl({:<10.5f}) = {:<10.5f} : f({:<10.5f}) = {:<10.5f}".format(i, x1, funcl(x1), x1, func(x1)))
-print("k{} : x1 = {:<10.5f} : x2 = {:<10.5f}  :: f({:^10.5f}) = {:<10.5f}".format(i, x1, x2, x2, func(x2)) )
+# print("k{} : x1 = {:<10.5f} : x2 = {:<10.5f}  :: f({:^10.5f}) = {:<10.5f}".format(i, x1, x2, x2, func(x2)) )
 while( abs(x2-x1) > precisao):
     i += 1
     x1 = x2
     x2 = x1-func(x1)/funcl(x1)
     # print("k{} : fite(x1) = {:<10.5f} : {:<10.5f} - {:<10.5f} = {:<10.5f}".format(i, x1, x2, x1, x2-x1 ))
     # print("k{} : fl({:<10.5f}) = {:<10.5f} : f({:<10.5f}) = {:<10.5f}".format(i, x1, funcl(x1), x1, func(x1)))
-    print("k{} : x1 = {:<10.5f} : x2 = {:<10.5f}  :: f({:^10.5f}) = {:<10.5f}".format(i, x1, x2, x2, func(x2)) )
+    # print("k{} : x1 = {:<10.5f} : x2 = {:<10.5f}  :: f({:^10.5f}) = {:<10.5f}".format(i, x1, x2, x2, func(x2)) )
     # sleep(1)
 
 print("precisão: ", precisao)
