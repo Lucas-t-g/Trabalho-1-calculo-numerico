@@ -56,8 +56,6 @@ class Matriz:
                     if pivo != 0:
                         for j in range(self.esc_estagio, self.colunas):
                             self.matriz[i][j] = self.matriz[i][j]/pivo  #divide a linha pelo primeiro termo
-            
-            # self.print_matriz()
 
             #subtraio todas as linhas abaixo da linha em questão
             pivo = self.matriz[self.esc_estagio][self.esc_estagio]
@@ -94,9 +92,10 @@ class Matriz:
 #__COMEÇA_AQUI_______________________________________________________________
 
 #para testar com outro metodo  de entrada(diretamente pelo codigo)
-# [[6.0, 2.0, -1.0, 7.0], [2.0, 4.0, 1.0, 7.0], [3.0, 2.0, 8.0, 13.0]]
-# [[-4.0, -1.0, 2.0, 7.0], [1.0, 6.0, -1.0, -6.0], [4.0, -3.0, -13.0, 6.0]]
-matriz = [[-4.0, -1.0, 2.0, 7.0], [1.0, 6.0, -1.0, -6.0], [4.0, -3.0, -13.0, 6.0]]
+# a = [[6.0, 2.0, -1.0, 7.0], [2.0, 4.0, 1.0, 7.0], [3.0, 2.0, 8.0, 13.0]]
+a = [[-4.0, -1.0, 2.0, 7.0], [1.0, 6.0, -1.0, -6.0], [4.0, -3.0, -13.0, 6.0]]
+# a = [[5.0, -1.0, 3.0, 1.0], [2.0, -10.0, 1.0, -7.0], [1.0, -2.0, 6.0, 5.0]]
+matriz = a
 linhas = 3
 colunas = 4
 matriz = Matriz(matriz, linhas, colunas)

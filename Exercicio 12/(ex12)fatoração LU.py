@@ -76,15 +76,15 @@ class Matriz:
             self.esc_estagio += 1
 
     def desmancha(self):
-        self.Y_matriz = []
-        for i in range(self.linhas):
-            self.Y_matriz.append( [self.matriz[i].pop(self.colunas-1)] )
-        self.colunas -= 1
+        if self.colunas > self.linhas:
+            self.Y_matriz = []
+            for i in range(self.linhas):
+                self.Y_matriz.append( [self.matriz[i].pop(self.colunas-1)] )
+            self.colunas -= 1
     
     def solucao_lu(self):
         self.desmancha()
         self.escalona()
-        self.Y_matriz = np.matrix(self.Y_matriz)
 
         L = []
         for i in range(self.colunas):
@@ -98,19 +98,22 @@ class Matriz:
                 L[i][j] = self.ms[i+j-1]
 
         L = np.matrix(L)
-        print("matriz L:\n", L, "\n")
-        L = np.linalg.inv(L)
-        
-        Y = np.dot(L, self.Y_matriz)
 
         U = np.matrix(self.matriz)
 
-        print("matriz U:\n", U, "\n")
-        U = np.linalg.inv(U)
-        self.X_matriz = np.dot(U, Y)
+        print("matriz L*U = A = \n", np.dot(L, U), "\n")
+        
+        L = np.linalg.inv(L)
+        print("matriz L':\n", L, "\n")
 
-        print("matriz U invertida:\n", U, "\n")
-        print("matriz L invertida:\n", L, "\n")
+        U = np.linalg.inv(U)
+        print("matriz U':\n", U, "\n")
+
+        print("matriz L'*U' = A = \n", np.dot(L, U), "\n")
+        # self.X_matriz = np.dot(U, Y)
+
+        # print("matriz U invertida:\n", U, "\n")
+        # print("matriz L invertida:\n", L, "\n")
 
         # print("solução do sistema:")
         # print(self.X_matriz, "\n")
@@ -125,11 +128,12 @@ class Matriz:
 
 #para testar com outro metodo  de entrada(diretamente pelo codigo)
 # a = [[6.0, 2.0, -1.0, 7.0], [2.0, 4.0, 1.0, 7.0], [3.0, 2.0, 8.0, 13.0]]
-a = [[-4.0, -1.0, 2.0, 7.0], [1.0, 6.0, -1.0, -6.0], [4.0, -3.0, -13.0, 6.0]]
+# a = [[-4.0, -1.0, 2.0, 7.0], [1.0, 6.0, -1.0, -6.0], [4.0, -3.0, -13.0, 6.0]]
 # a = [[5.0, -1.0, 3.0, 1.0], [2.0, -10.0, 1.0, -7.0], [1.0, -2.0, 6.0, 5.0]]
+a = [[4.0, 1.0, -1.0], [-3.0, 6.0, 2.0], [1.0, -5.0, 7.0]]
 matriz = a
 linhas = 3
-colunas = 4
+colunas = 3
 matriz = Matriz(matriz, linhas, colunas)
 print("sua matriz: ")
 matriz.print_matriz()
@@ -137,5 +141,5 @@ matriz.print_matriz()
 matriz.solucao_lu()
 
 
-# print("sua matrizes triangularizada: ")
-# matriz.print_matriz()
+# xxx = np.matrix([[26/111,-1/111,4/111],[23/222,29/222,-5/222],[3/74,7/74,9/74]])
+# print(xxx)
