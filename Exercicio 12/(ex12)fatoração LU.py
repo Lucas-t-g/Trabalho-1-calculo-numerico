@@ -1,4 +1,5 @@
 import numpy as np
+from fractions import Fraction
 
 class Matriz:
     def __init__(self, matriz, linhas, colunas):
@@ -109,7 +110,11 @@ class Matriz:
         U = np.linalg.inv(U)
         print("matriz U':\n", U, "\n")
 
-        print("matriz L'*U' = A = \n", np.dot(L, U), "\n")
+        A = np.dot(L, U)
+        print("matriz L'*U' = A = \n", A, "\n")
+
+        print("matriz em fração L'*U' = A =")
+        matriz_fracao(A, self.linhas, self.colunas)
         # self.X_matriz = np.dot(U, Y)
 
         # print("matriz U invertida:\n", U, "\n")
@@ -118,7 +123,20 @@ class Matriz:
         # print("solução do sistema:")
         # print(self.X_matriz, "\n")
 
-        
+def matriz_fracao(mat, linhas, colunas):
+    # print(mat)
+    mat2 = []
+    for i  in range(linhas):
+        linha = []
+        for j in range(colunas):
+            temp = Fraction.from_float(mat[i, j])
+            linha.append(str(temp))
+        mat2.append(linha)
+    
+    for linha in mat2:
+        print(linha)
+
+    return mat2
             
 
 

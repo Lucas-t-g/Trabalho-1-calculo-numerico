@@ -68,8 +68,9 @@ def bisseccao(a, b):
     print("precisão: {:^10.5f}".format(precisao) ) 
     print("número de iterações: {:^10}".format( i))
     xzero = (a+b)/2
-    print("raiz aproximada: fl({:^10.5f}) = {:>10.5f}".format(xzero, func(xzero)))
-    print("ponto na função: f({:^10.5f}) = {:>10.5f}".format(xzero, funcr(xzero)))
+    print("ponto na função: f({:^17}) = {:>17}".format(xzero, funcr(xzero)))
+    print("raiz aproximada: fl({:^17}) = {:>17}".format(xzero, func(xzero)))
+    print("ponto na derivada segunda: f({:^17}) = {:>17}".format(xzero, funcl(xzero)))
     if( funcl(xzero) < 0 ):
         print("é ponto de máximo\n")
     else:

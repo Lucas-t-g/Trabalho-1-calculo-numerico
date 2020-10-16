@@ -16,8 +16,8 @@ def funcl(x):
     exp = mt.e**(-0.5*x)
     return -c*sin_ax + a*cos_ax*exp + b*sin_ax*exp
 
-for j in arange(0, 2*mt.pi+0.3, (1/10)):
-    print("x = {:<17f}) : f(x)= {:<17f} : f(x)= {:<17f} : f(x)= {:<17f}".format(j, funcx(j), func(j), funcl(j)) )
+# for j in arange(0, 2*mt.pi+0.3, (1/10)):
+#     print("x = {:<17f}) : f(x)= {:<17f} : f(x)= {:<17f} : f(x)= {:<17f}".format(j, funcx(j), func(j), funcl(j)) )
 
 def bisseccao(a, b):
     i = 0
@@ -35,8 +35,9 @@ def bisseccao(a, b):
     print("precisão: {:^10.5f}".format(precisao) ) 
     print("número de iterações: {:^10}".format( i))
     xzero = (a+b)/2
-    print("raiz aproximada: fl({:^10.5f}) = {:>10.5f}".format(xzero, func(xzero)))
-    print("ponto na função: f({:^10.5f}) = {:>10.5f}".format(xzero, funcx(xzero)))
+    print("ponto na função: f({:^17}) = {:>17}".format(xzero, funcx(xzero)))
+    print("raiz aproximada: fl({:^17}) = {:>17}".format(xzero, func(xzero)))
+    print("ponto na derivada segunda: f({:^17}) = {:>17}".format(xzero, funcl(xzero)))
     if( funcl(xzero) < 0 ):
         print("é ponto de máximo\n")
     else:

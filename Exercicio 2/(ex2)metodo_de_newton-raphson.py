@@ -10,7 +10,7 @@ def func(x):
     return -(1/x)*(mt.sinh(a*x) - mt.sinh(b*x)) - l
 
 def funcl(x):
-    return -(a/x)*mt.cosh(a*x) + (x**-2)*mt.sinh(a*x) -(b/x)*mt.cosh(b*x) + (x**-2)*mt.sinh(b*x) 
+    return -(a/x)*mt.cosh(a*x) + (x**-2)*mt.sinh(a*x) +(b/x)*mt.cosh(b*x) - (x**-2)*mt.sinh(b*x)
 
 # possivel intervalo
 inicio = 0.08

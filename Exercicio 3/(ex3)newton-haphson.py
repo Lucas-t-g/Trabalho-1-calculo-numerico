@@ -19,25 +19,25 @@ def funcl(x):
 
 
 
-x = []
-y = []
-y2 = []
-y3 = []
-for j in arange(0, 2.1, 0.001):
-    # print("x = {:<17f}) : f(x)= {:<17f} : f(x)= {:<17f} : f(x)= {:<17f}".format(j, funcr(j), func(j), 1) )
-    x.append(j)
-    y.append(funcx(j))
-    y2.append(func(j))
-    y3.append(funcl(j))
+# x = []
+# y = []
+# y2 = []
+# y3 = []
+# for j in arange(0, 2.1, 0.001):
+#     # print("x = {:<17f}) : f(x)= {:<17f} : f(x)= {:<17f} : f(x)= {:<17f}".format(j, funcr(j), func(j), 1) )
+#     x.append(j)
+#     y.append(funcx(j))
+#     y2.append(func(j))
+#     y3.append(funcl(j))
 
-plt.plot(x, y, 'r-')
-plt.plot(x,y2, 'g-')
-plt.plot(x,y3, 'b-')
-plt.ylabel('gráfico')
-plt.xlabel('X')
-plt.ylabel('Y')
-plt.grid(True)
-plt.show()
+# plt.plot(x, y, 'r-')
+# plt.plot(x,y2, 'g-')
+# plt.plot(x,y3, 'b-')
+# plt.ylabel('gráfico')
+# plt.xlabel('X')
+# plt.ylabel('Y')
+# plt.grid(True)
+# plt.show()
 
 def new_haph( b):
     x1 = b
@@ -55,6 +55,7 @@ def new_haph( b):
     print("número de iterações: ", i)
     print("raiz aproximada: f({:<17}) = {:<17}".format(x2, func(x2)))
     print("ponto na função: f({:^17}) = {:>17}".format(x2, funcx(x2)))
+    print("ponto na derivada segunda: f({:^17}) = {:>17}".format(x2, funcl(x2)))
     if( funcl(x2) < 0 ):
         print("é ponto de máximo\n")
     else:
