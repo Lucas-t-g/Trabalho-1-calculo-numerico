@@ -112,8 +112,8 @@ class Matriz:
         print("matriz U invertida:\n", U, "\n")
         print("matriz L invertida:\n", L, "\n")
 
-        # print("solução do sistema:")
-        # print(self.X_matriz, "\n")
+        print("solução do sistema:")
+        print(self.X_matriz, "\n")
 
         
             

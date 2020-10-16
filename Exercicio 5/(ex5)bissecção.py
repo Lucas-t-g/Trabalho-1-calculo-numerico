@@ -16,8 +16,8 @@ def funcl(x):
     exp = mt.e**(-0.5*x)
     return -c*sin_ax + a*cos_ax*exp + b*sin_ax*exp
 
-# for j in arange(2*mt.pi, 2*mt.pi+0.3, (1/50)):
-#     print("x = {:<17f}) : f(x)= {:<17f} : f(x)= {:<17f} : f(x)= {:<17f}".format(j, funcx(j), func(j), funcl(j)) )
+for j in arange(0, 2*mt.pi+0.3, (1/10)):
+    print("x = {:<17f}) : f(x)= {:<17f} : f(x)= {:<17f} : f(x)= {:<17f}".format(j, funcx(j), func(j), funcl(j)) )
 
 def bisseccao(a, b):
     i = 0

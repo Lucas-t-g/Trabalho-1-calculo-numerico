@@ -19,3 +19,4 @@ print("precisão: ", precisao)
 print("número de iterações: ", i)
 xzero = (a+b)/2
 print("f(",xzero,") = ", func(xzero))
+
